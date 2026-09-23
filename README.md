@@ -115,7 +115,7 @@ El archivo `.env` contiene las **variables de entorno** de la aplicación: confi
 
 La landing page del sistema está diseñada con los colores caracteristicos de la universidad para transmitir una identidad institucional clara y moderna para la biblioteca universitaria de COTECNOVA.
 
-![Landing page del sistema](public/build/images/logo-cotecnova.png)
+![Landing page del sistema](docs/visual/Captura 1.png
 
 ### Cambios visuales realizados
 
