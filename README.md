@@ -1,8 +1,6 @@
 # SGE - Sistema de Gestión Empresarial
 
-## Capítulo 2: Instalación de Laravel
-
-### 2.1 Requisitos previos
+### 2.1 Requisitos 
 
 - PHP 8.2 o superior
 - Composer
@@ -12,7 +10,7 @@
 
 1. Clonar el repositorio:
    ```bash
-   git clone <https://github.com/manuela-aguirre/SGE-Clase3.git>
+   git clone <https://github.com/manuela-aguirre/Clase4-SGE>
    cd sge
    ```
 
@@ -68,7 +66,7 @@ Para detener el entorno:
 ./vendor/bin/sail down
 ```
 
----
+
 
 ## 2.3 Estructura de carpetas
 
@@ -87,61 +85,8 @@ Al ejecutar `composer create-project` (o clonar un proyecto Laravel ya creado), 
 | `vendor/` | Todas las dependencias instaladas por Composer. No se toca manualmente ni se sube al repositorio. |
 | `.env` | Variables de entorno específicas de cada instalación. No se sube al repositorio. |
 
-### Patrón MVC (Modelo–Vista–Controlador)
 
-Laravel organiza la aplicación siguiendo el patrón **MVC**, que separa la aplicación en tres componentes:
-
-1. **Modelo (M):** representa los datos y la lógica de negocio; habla con la base de datos. En Laravel vive en `app/Models/`.
-2. **Vista (V):** es lo que el usuario ve, la interfaz. En Laravel vive en `resources/views/` y usa el motor de plantillas **Blade**.
-3. **Controlador (C):** recibe las peticiones del usuario, consulta al Modelo para obtener datos y decide qué Vista mostrar. En Laravel vive en `app/Http/Controllers/`.
-
-**Analogía (un restaurante):**
-- **Modelo** = la cocina (donde se preparan los datos).
-- **Vista** = el menú y la presentación del plato (lo que ve el cliente).
-- **Controlador** = el mesero (recibe el pedido, va a la cocina, trae la comida).
-
-Esto es útil porque separa responsabilidades, facilita el mantenimiento y permite que distintas personas trabajen en Vistas y en Modelos/Controladores sin pisarse el trabajo.
-
----
-
-## 2.4 Diagrama del flujo de una petición
-
-Esquema general del flujo en Laravel:
-
-```
-Usuario → Ruta (routes/web.php) → Controlador → Modelo → BD
-                                                            ↓
-                    ← Respuesta ← Vista ← Controlador ←
-```
-
-```mermaid
-flowchart TD
-    A[Usuario escribe una URL, ej: localhost/usuarios] --> B[public/index.php - punto de entrada]
-    B --> C{routes/web.php<br/>¿existe una ruta para esa URL?}
-    C -->|Sí| D[Controlador asociado]
-    D --> E[Modelo - obtiene datos de la BD]
-    E --> F[(Base de datos)]
-    F --> E
-    E --> D
-    D --> G[Vista Blade - resources/views]
-    G --> H[HTML generado]
-    H --> I[Respuesta devuelta al navegador]
-```
-
-**Paso a paso (¿Qué pasa cuando un usuario escribe una URL en el navegador?):**
-
-1. El usuario escribe, por ejemplo, `http://localhost/usuarios`.
-2. El archivo `public/index.php` recibe la petición (es el punto de entrada de toda la aplicación).
-3. Laravel busca en `routes/web.php` si existe una ruta definida para `/usuarios`.
-4. Si existe, ejecuta el Controlador asociado a esa ruta.
-5. El Controlador usa el Modelo para obtener los datos necesarios desde la base de datos.
-6. El Controlador pasa esos datos a una Vista.
-7. La Vista genera el HTML final.
-8. Laravel devuelve ese HTML como respuesta al navegador del usuario.
-
----
-
-## 2.5 Variables de entorno
+## 2.4 Variables de entorno
 
 El archivo `.env` contiene las **variables de entorno** de la aplicación: configuraciones que cambian según el entorno donde corre el proyecto (local, pruebas, producción). Es importante porque:
 
@@ -168,20 +113,20 @@ El archivo `.env` contiene las **variables de entorno** de la aplicación: confi
 
 ### Captura de pantalla de la landing page
 
-La landing page del sistema está diseñada para transmitir una identidad institucional clara y moderna para la biblioteca universitaria de COTECNOVA.
+La landing page del sistema está diseñada con los colores caracteristicos de la universidad para transmitir una identidad institucional clara y moderna para la biblioteca universitaria de COTECNOVA.
 
 ![Landing page del sistema](public/build/images/logo-cotecnova.png)
 
 ### Cambios visuales realizados
 
-Se realizaron ajustes centrados en una experiencia visual coherente y profesional para un ERP de biblioteca universitaria:
+Se realizaron ajustes centrados en dar experiencia visual coherente y profesional para un ERP de biblioteca universitaria:
 
-- Se reforzó la identidad institucional con colores verdes propios de la marca.
-- Se mantuvo una estructura limpia en la landing page con hero section, botones de acción y panel de estadísticas.
-- Se unificó la estética de login, registro y dashboard con la misma lógica visual.
+- Se reforzó la identidad institucional con colores verdes propios de la universidad.
+- Se mantuvo una estructura limpia en la landing page con hero section, botones de acción y panel de estadísticas para fácilita el trabajo del bibliotecario.
+- Se unificó la estética de login, registro y dashboard con la misma lógica de diseño.
 - Se redujo la carga visual y se priorizó una composición sobria con tarjetas, sombras y espacios bien definidos.
-- Se incorporó el logo real institucional en los puntos clave de la interfaz para reforzar la marca.
-- Se personalizó la navegación y el dashboard para que la experiencia siga siendo uniforme en todo el sistema.
+- Se incorporó el logo real institucional en los puntos clave de la interfaz para reforzar la identidad de la universidad.
+- Se personalizó la navegación y el dashboard para que la experiencia siga siendo uniforme en todo el sistema haciendo más fácil su uso.
 
 ### Paleta de colores utilizada
 
@@ -212,6 +157,6 @@ La interfaz usa una paleta verde/blanco inspirada en la identidad institucional 
 - El mismo esquema cromático en todas las vistas principales.
 - Componentes reutilizables para mantener coherencia entre login, registro, welcome y dashboard.
 
----
+
 
 

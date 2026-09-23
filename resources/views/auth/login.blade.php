@@ -251,7 +251,7 @@
                 <div class="cotec-header">
                     <div class="cotec-logo-circle" style="background: transparent; border-radius: 0; border: none; box-shadow: none; width: 88px; height: 88px;">
                         <img
-                            src="{{ asset('build/images/logo-cotecnova.png') }}"
+                            src="{{ asset('img/logo-cotecnova.png') }}"
                             alt="Logo COTECNOVA"
                             style="width:100%; height:100%; object-fit:contain; display:block;"
                         >

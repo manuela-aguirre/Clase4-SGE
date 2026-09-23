@@ -4,8 +4,8 @@
             <div class="flex items-center gap-4">
                 <a href="{{ route('dashboard') }}" class="flex items-center gap-3">
                     <div class="flex items-center justify-center bg-transparent">
-                        @if (file_exists(public_path('build/images/logo-cotecnova.png')))
-                            <img src="{{ asset('build/images/logo-cotecnova.png') }}" alt="COTECNOVA" class="h-8 w-auto max-w-[120px] object-contain" />
+                        @if (file_exists(public_path('img/logo-cotecnova.png')))
+                            <img src="{{ asset('img/logo-cotecnova.png') }}" alt="COTECNOVA" class="h-8 w-auto max-w-[120px] object-contain" />
                         @else
                             <span class="text-sm font-black text-[#14532d]">C</span>
                         @endif

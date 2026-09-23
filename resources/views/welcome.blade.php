@@ -502,7 +502,7 @@
                     <div class="cotec-brand">
                         <div class="cotec-brand-mark" style="background: transparent; box-shadow: none; border: none; border-radius: 0; width: 96px; height: 96px;">
                             <img
-                                src="{{ asset('build/images/logo-cotecnova.png') }}"
+                                src="{{ asset('img/logo-cotecnova.png') }}"
                                 alt="Logo COTECNOVA"
                                 style="width:100%; height:100%; object-fit:contain; display:block;"
                             >
@@ -670,8 +670,8 @@
             <div class="cotec-footer-inner">
                 <div>
                     <div class="cotec-footer-brand">
-                        @if (file_exists(public_path('build/images/logo-cotecnova.png')))
-                            <img src="{{ asset('build/images/logo-cotecnova.png') }}" alt="Logo COTECNOVA" style="width:48px;height:48px;object-fit:contain;display:block;" />
+                        @if (file_exists(public_path('img/logo-cotecnova.png')))
+                            <img src="{{ asset('img/logo-cotecnova.png') }}" alt="Logo COTECNOVA" style="width:48px;height:48px;object-fit:contain;display:block;" />
                         @else
                             <div class="cotec-footer-brand-mark">B</div>
                         @endif
